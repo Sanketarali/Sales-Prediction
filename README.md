@@ -33,21 +33,31 @@ from sklearn import metrics<br>
 data=pd.read_csv('advertising.csv')<br>
 data.head()<br>
 
+![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/Screenshot%20(3026).png)
+
 <h3>Now before moving forward, let’s have a look at whether this dataset contains any null values or not:<br></h3>
 
 data.isnull().sum()<br>
+
+![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/Screenshot%20(3027).png)
 
 <h3>So this dataset doesn’t have any null values. Now let’s visualize the relationship between the amount spent on advertising on TV and units sold:</h3><br>
 figure=px.scatter(data_frame=data,x='Sales',y='TV',trendline='ols')<br>
 figure.show()<br>
 
+![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/Screenshot%20(3028).png)
+
 <h3>Now let’s visualize the relationship between the amount spent on advertising on newspapers and units sold:</h3><br>
 figure=px.scatter(data_frame=data,x='Sales',y='Radio',trendline='ols')<br>
 figure.show()<br>
 
+![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/Screenshot%20(3031).png)
+
 <h3>Now let’s visualize the relationship between the amount spent on advertising on radio and units sold:</h3><br>
 figure=px.scatter(data_frame=data,x='Sales',y='Newspaper',trendline='ols')<br>
 figure.show()<br>
+
+![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/Screenshot%20(3030).png)
 
 <h3>Out of all the amount spent on advertising on various platforms, I can see that the amount spent on advertising the product on TV results in more sales of the product.</h3>
 
@@ -60,4 +70,13 @@ lr.fit(X_train,y_train)<br>
 y_pred1 = lr.predict(X_test)<br>
 score=metrics.r2_score(y_test,y_pred1)<br>
 score<br>
+
+# Result 
 0.9059011844150826<br>
+
+![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/sales_new.png)
+
+
+
+
+
