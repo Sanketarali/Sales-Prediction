@@ -32,32 +32,36 @@ from sklearn import metrics<br>
 
 data=pd.read_csv('advertising.csv')<br>
 data.head()<br>
+![Screenshot (3026)](https://user-images.githubusercontent.com/110754364/235335072-1a13544e-d9f2-44d5-b469-3e9fb76535f3.png)
 
-![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/Screenshot%20(3026).png)
+
 
 <h3>Now before moving forward, let’s have a look at whether this dataset contains any null values or not:<br></h3>
 
 data.isnull().sum()<br>
 
-![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/Screenshot%20(3027).png)
+![Screenshot (3027)](https://user-images.githubusercontent.com/110754364/235335076-1a2963b3-8987-4771-9db6-e67e42d0228a.png)
+
 
 <h3>So this dataset doesn’t have any null values. Now let’s visualize the relationship between the amount spent on advertising on TV and units sold:</h3><br>
 figure=px.scatter(data_frame=data,x='Sales',y='TV',trendline='ols')<br>
 figure.show()<br>
 
-![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/Screenshot%20(3028).png)
+![Screenshot (3028)](https://user-images.githubusercontent.com/110754364/235335082-5b3f33b7-b2ec-475c-b4dc-a2bfb1eb65ee.png)
+
 
 <h3>Now let’s visualize the relationship between the amount spent on advertising on newspapers and units sold:</h3><br>
-figure=px.scatter(data_frame=data,x='Sales',y='Radio',trendline='ols')<br>
-figure.show()<br>
 
-![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/Screenshot%20(3031).png)
+![Screenshot (3030)](https://user-images.githubusercontent.com/110754364/235335084-4f465b92-2b11-425c-abed-ee17255038c0.png)
+
+
+
 
 <h3>Now let’s visualize the relationship between the amount spent on advertising on radio and units sold:</h3><br>
 figure=px.scatter(data_frame=data,x='Sales',y='Newspaper',trendline='ols')<br>
 figure.show()<br>
 
-![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/Screenshot%20(3030).png)
+![Screenshot (3031)](https://user-images.githubusercontent.com/110754364/235335157-154c2dcc-a8db-4feb-a05d-a4b32477873c.png)
 
 <h3>Out of all the amount spent on advertising on various platforms, I can see that the amount spent on advertising the product on TV results in more sales of the product.</h3>
 
@@ -74,9 +78,7 @@ score<br>
 # Result 
 0.9059011844150826<br>
 
-![result](https://github.com/Sanketarali/Sales-Prediction/blob/main/sales_new.png)
-
-
+![sales_new](https://user-images.githubusercontent.com/110754364/235335342-7f190ca1-19e1-49ca-a74b-7fd618b518ec.png)
 
 
 
